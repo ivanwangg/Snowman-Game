@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium';
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #c0edff 200px, #fafafa 550px);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#world {
+    height: 400px;
+    width: 1535px;
+    position: relative;
+    overflow: hidden;
+}
+
+#world #snowman {
+    height: 80px;
+    width: 50px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+}
+
+#world #snowman img {
+    height: 80px;
+    width: 50px;
+}
+
+.snowmanActiveDuck {
+    animation: snowmanDuck 0.5s linear infinite;
+}
+
+@keyframes snowmanDuck {
+    0%, 100% {
+        bottom: 28px;
+    }
+    20%, 80% {
+        bottom: -10px;
+    }
+}
+
+.snowmanActive {
+    animation: snowmanJump 0.5s linear infinite;
+}
+
+@keyframes snowmanJump {
+    0%, 100% {
+        bottom: 28px;
+    }
+    45%, 55% {
+        bottom: 160px;
+    }
+}
+
+#world #block {
+    height: 80px;
+    width: 50px;
+    position: absolute;
+    bottom: 27px;
+    right: 20px;
+}
+
+#world #block img {
+    height: 80px;
+    width: 50px;
+}
+
+.blockActive {
+    animation: blockMove 1.5s linear infinite;
+}
+
+@keyframes blockMove {
+    0% {
+        right: -125px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+#world #ground {
+    height: 30px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#world #ground img {
+    height: 30px;
+    width: 2400px;
+    position: absolute;
+    left: 0;
+    animation: none;
+}
+
+@keyframes groundMove {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -800px;
+    }
+}
+
+#world #cloud {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: -50px;
+}
+
+#world #cloud img {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    animation: none;
+}
+
+#world #cloud2 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    right: -1100px;
+}
+
+#world #cloud2 img {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    animation: none;
+}
+
+@keyframes cloudMove {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -3000px;
+    }
+}
+
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #8c9be7;
+}
+
+#highScore {
+    height: auto;
+    width: auto;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    color: #8c9be7;
+}
+
+#gameOver {
+    display: none;
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 190px);
+    top: calc(30%);
+    width: 362px;
+    height: 80px;
+    color: #8c9be7;
+}
+
+#startScreen {
+    text-align: center;
+    font-size: 45px;
+    position: absolute;
+    left: calc(50% - 240px);
+    top: calc(25%);
+    width: 460px;
+    height: 80px;
+    color: #8c9be7;
+}
+
+#displayScore {
+    text-align: center;
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    left: calc(50% - 170px);
+    top: calc(50%);
+    width: 300px;
+    height: 40px;
+    color: #8c9be7;
+}
